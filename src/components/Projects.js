@@ -1,6 +1,18 @@
-import React from 'react';
+import {
+  FaCode,
+  FaExternalLinkAlt,
+  FaFileAlt,
+  FaGithub,
+  FaLaptopCode,
+  FaMapMarkedAlt,
+  FaNewspaper,
+  FaStar,
+  FaTasks,
+  FaUser,
+  FaUserShield,
+  FaWallet
+} from 'react-icons/fa';
 import '../styles/Projects.css';
-import { FaGithub, FaExternalLinkAlt, FaCode, FaLaptopCode, FaFileAlt, FaNewspaper, FaQuestion, FaUser, FaGamepad } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
@@ -29,23 +41,21 @@ const Projects = () => {
         "Reset and new game options"
       ],
       technologies: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://tic-tac-toe-buttle.netlify.app/",
       githubLink: "https://github.com/Suraj051198/tic-tac-toe-game",
       icon: <FaCode />
     },
     {
-      title: "Rock Paper Scissors",
-      description: "Interactive Rock Paper Scissors game with score tracking and responsive design.",
+      title: "Expense Tracker Application",
+      description: "A modern expense tracking app to monitor your daily, weekly, and monthly spending.",
       features: [
-        "Player vs Computer gameplay",
-        "Score tracking",
-        "Animated moves",
-        "Responsive UI"
+        "Add and delete transactions",
+        "Calculate total income and expenses",
+        "Real-time balance updates",
+        "Responsive and user-friendly interface"
       ],
       technologies: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://rock-paper-scissors-new-game.netlify.app/",
-      githubLink: "https://github.com/Suraj051198/Rock-Paper-Scissors-Game",
-      icon: <FaGamepad />
+      githubLink: "https://github.com/Suraj051198/Expense-Tracker-App",
+      icon: <FaWallet />
     },
     {
       title: "iNotebook",
@@ -57,7 +67,6 @@ const Projects = () => {
         "MongoDB database integration"
       ],
       technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-      liveLink: "",
       githubLink: "https://github.com/Suraj051198/iNotebook",
       icon: <FaLaptopCode />
     },
@@ -76,18 +85,20 @@ const Projects = () => {
       icon: <FaNewspaper />
     },
     {
-      title: "Quiz Application",
-      description: "An interactive quiz application that tests users' knowledge across various topics.",
+      title: "User Management App",
+      description: "A full-stack user management system with authentication and profile management capabilities.",
       features: [
-        "Multiple choice questions",
-        "Score tracking",
-        "Timer functionality",
-        "Results summary"
+        "JWT-based authentication",
+        "Profile management",
+        "Secure password hashing with bcrypt",
+        "Full CRUD operations for users",
+        "Centralized error handling"
       ],
-      technologies: ["JavaScript", "HTML", "CSS"],
-      liveLink: "",
-      githubLink: "https://github.com/Suraj051198/Quiz-Application",
-      icon: <FaQuestion />
+      technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "bcrypt", "JavaScript"],
+      githubLink: "https://github.com/Suraj051198/user-management-app",
+      liveLink: "https://all-password-manager-app.netlify.app/",
+      icon: <FaUserShield />,
+      image: process.env.PUBLIC_URL + "/ProjectsIMG/User-Management-App.png"
     },
     {
       title: "Portfolio Website",
@@ -101,6 +112,47 @@ const Projects = () => {
       liveLink: "#",
       githubLink: "https://github.com/Suraj051198/portfolio",
       icon: <FaUser />
+    },
+    {
+      title: "Store Rating System",
+      description: "A full-featured web app for managing store ratings with role-based access and data persistence using localStorage.",
+      features: [
+        "Role-based login (Admin, Store Owner, User)",
+        "User/store management (CRUD)",
+        "Rate, edit & filter store ratings",
+        "Validation & session handling"
+      ],
+      technologies: ["React", "Bootstrap", "React Router", "localStorage"],
+      liveLink: "https://store-rating.netlify.app/login",
+      githubLink: "https://github.com/Suraj051198/roxiler-store-rating.git",
+      icon: <FaStar />
+    },
+    {
+      title: "Task Manager Application",
+      description: "Feature-rich task management app with Kanban, Calendar & List views, built using React and Tailwind.",
+      features: [
+        "Kanban board, calendar, list view",
+        "Drag-and-drop tasks",
+        "Search & filter",
+        "Dark/Light mode support"
+      ],
+      technologies: ["React", "Tailwind CSS", "Context API", "Moment.js"],
+      liveLink: "https://task-tracker-appli.netlify.app/",
+      githubLink: "https://github.com/Suraj051198/task-tracker.git",
+      icon: <FaTasks />
+    },
+    {
+      title: "Travel Maharashtra",
+      description: "Explore and book travel experiences across Maharashtra. Features destinations, packages, and responsive UI.",
+      features: [
+        "View destinations & packages",
+        "Filter and book experiences",
+        "Responsive design & testimonials"
+      ],
+      technologies: ["React", "React Router", "CSS3", "HTML5"],
+      liveLink: "https://travel-app-by.netlify.app/",
+      githubLink: "https://github.com/Suraj051198/travel.git",
+      icon: <FaMapMarkedAlt />
     }
   ];
 
@@ -114,29 +166,35 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-image">
-              <div className="project-icon">
-                {project.icon}
-              </div>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-thumbnail"
+                />
+              ) : (
+                <div className="project-icon">{project.icon}</div>
+              )}
               <div className="project-overlay">
                 <div className="project-links">
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="project-link"
                     aria-label={`GitHub repository for ${project.title}`}
                   >
-                    <FaGithub /> Code
+                    <FaGithub /> View Code
                   </a>
-                  {project.liveLink && (
-                    <a 
-                      href={project.liveLink} 
-                      target="_blank" 
+                  {project.liveLink && project.title !== "Expense Tracker Application" && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="project-link"
                       aria-label={`Live demo for ${project.title}`}
                     >
-                      <FaExternalLinkAlt /> Demo
+                      <FaExternalLinkAlt /> Live Demo
                     </a>
                   )}
                 </div>
@@ -152,7 +210,9 @@ const Projects = () => {
               </ul>
               <div className="tech-stack">
                 {project.technologies.map((tech, techIndex) => (
-                  <span className="tech-tag" key={techIndex}>{tech}</span>
+                  <span className="tech-tag" key={techIndex}>
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
@@ -163,4 +223,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
