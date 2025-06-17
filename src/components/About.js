@@ -24,7 +24,7 @@ const About = () => {
           </div>
         </div>
         <div className="about-text">
-          <h3>💻 Full Stack Developer | Pune, India</h3>
+          <h3> Full Stack Developer | Pune, India</h3>
           <p>
             I'm a passionate developer specializing in frontend and backend technologies. 
             I love turning ideas into efficient, user-friendly applications—handling everything from concept to deployment.
@@ -35,9 +35,9 @@ const About = () => {
           </div>
           
           <ul className="about-list">
-            <li>✔️ Write clean, scalable code</li>
-            <li>✔️ Develop robust, high-performance applications</li>
-            <li>✔️ Solve real-world problems with cutting-edge technologies</li>
+            <li>  Write clean, scalable code</li>
+            <li>  Develop robust, high-performance applications</li>
+            <li>  Solve real-world problems with cutting-edge technologies</li>
           </ul>
           
           <div className="about-buttons">
@@ -49,7 +49,7 @@ const About = () => {
               duration={500}
               className="about-button primary"
             >
-              📩 Contact Me
+              Contact Me
             </Link>
             <Link
               to="projects"
@@ -59,7 +59,7 @@ const About = () => {
               duration={500}
               className="about-button secondary"
             >
-              🚀 View Projects
+              View Projects
             </Link>
           </div>
         </div>

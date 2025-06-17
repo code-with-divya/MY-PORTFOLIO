@@ -1,7 +1,7 @@
-import React from 'react';
-import '../styles/Footer.css';
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+// Footer.js
+import { FaArrowUp, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+import '../styles/Footer.css';
 
 const Footer = () => {
   return (
@@ -13,15 +13,16 @@ const Footer = () => {
           smooth={true}
           offset={-70}
           duration={500}
+          className="top-link"
         >
-          <FaArrowUp />
+          <FaArrowUp className="top-icon" />
         </Link>
       </div>
       
       <div className="footer-content">
         <div className="footer-info">
-          <h3>Suraj Sonawane</h3>
-          <p>Full Stack Developer based in Pune, India</p>
+          <h3 className="footer-name">Suraj Sonawane</h3>
+          <p className="footer-description">Full Stack Developer based in Pune, India</p>
         </div>
         
         <div className="social-links">
@@ -32,7 +33,7 @@ const Footer = () => {
             aria-label="GitHub"
             className="social-link"
           >
-            <FaGithub />
+            <FaGithub className="social-icon github" />
           </a>
           <a 
             href="https://www.linkedin.com/in/sonawane-suraj/" 
@@ -41,23 +42,23 @@ const Footer = () => {
             aria-label="LinkedIn"
             className="social-link"
           >
-            <FaLinkedin />
+            <FaLinkedin className="social-icon linkedin" />
           </a>
           <a 
             href="mailto:surajsonawane172@gmail.com" 
             aria-label="Email"
             className="social-link"
           >
-            <FaEnvelope />
+            <FaEnvelope className="social-icon email" />
           </a>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Suraj Sonawane. All rights reserved.</p>
+        <p className="copyright">&copy; {new Date().getFullYear()} Suraj Sonawane. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;
