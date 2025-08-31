@@ -1,7 +1,7 @@
-// Footer.js
-import { FaArrowUp, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import React from 'react';
 import '../styles/Footer.css';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -13,52 +13,51 @@ const Footer = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="top-link"
         >
-          <FaArrowUp className="top-icon" />
+          <FaArrowUp />
         </Link>
       </div>
       
       <div className="footer-content">
         <div className="footer-info">
-          <h3 className="footer-name">Suraj Sonawane</h3>
-          <p className="footer-description">Full Stack Developer based in Pune, India</p>
+          <h3>Divya Gawade</h3>
+          <p>Full Stack Developer based in Pune, India</p>
         </div>
         
         <div className="social-links">
           <a 
-            href="https://github.com/Suraj051198" 
+            href="https://github.com/code-with-divya" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="social-link"
           >
-            <FaGithub className="social-icon github" />
+            <FaGithub />
           </a>
           <a 
-            href="https://www.linkedin.com/in/sonawane-suraj/" 
+            href="https://www.linkedin.com/in/divya-gawade" 
             target="_blank" 
             rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="social-link"
           >
-            <FaLinkedin className="social-icon linkedin" />
+            <FaLinkedin />
           </a>
           <a 
-            href="mailto:surajsonawane172@gmail.com" 
+            href="mailto:gawadedivya15@gmail.com" 
             aria-label="Email"
             className="social-link"
           >
-            <FaEnvelope className="social-icon email" />
+            <FaEnvelope />
           </a>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <p className="copyright">&copy; {new Date().getFullYear()} Suraj Sonawane. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Divya Gawade. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer; 

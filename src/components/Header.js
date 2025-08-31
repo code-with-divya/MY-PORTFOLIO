@@ -1,4 +1,4 @@
-// Header.js
+import React from 'react';
 import { Link } from 'react-scroll';
 import '../styles/Header.css';
 
@@ -15,9 +15,8 @@ const Header = ({ activeSection, setActiveSection }) => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="logo-link"
           >
-            Suraj Sonawane
+          Divya Gawade
           </Link>
         </div>
         <ul className="nav-links">
@@ -31,7 +30,7 @@ const Header = ({ activeSection, setActiveSection }) => {
                 offset={-70}
                 duration={500}
                 onClick={() => setActiveSection(item)}
-                className={`nav-link ${activeSection === item ? 'active' : ''}`}
+                className={activeSection === item ? 'active' : ''}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </Link>
@@ -43,4 +42,4 @@ const Header = ({ activeSection, setActiveSection }) => {
   );
 };
 
-export default Header;
+export default Header; 

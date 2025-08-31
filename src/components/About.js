@@ -12,9 +12,9 @@ const About = () => {
       <div className="about-content">
         <div className="about-image">
           <div className="image-container">
-            <img 
-              src="/WhatsApp Image 2025-03-14 at 01.10.04_17254417.jpg" 
-              alt="Suraj Sonawane - Full Stack Developer" 
+            <img
+              src="/image/diu.jpg"
+              alt="Divya Gawade - Full Stack Developer"
               className="profile-image"
               onError={(e) => {
                 e.target.onerror = null;
@@ -24,22 +24,22 @@ const About = () => {
           </div>
         </div>
         <div className="about-text">
-          <h3> Full Stack Developer | Pune, India</h3>
+          <h3>💻 Full Stack Developer | Pune, India</h3>
           <p>
-            I'm a passionate developer specializing in frontend and backend technologies. 
+            I'm a passionate developer specializing in frontend and backend technologies.
             I love turning ideas into efficient, user-friendly applications—handling everything from concept to deployment.
           </p>
-          
+
           <div className="about-highlights-header">
             <h4>🔹 What I do:</h4>
           </div>
-          
+
           <ul className="about-list">
-            <li>  Write clean, scalable code</li>
-            <li>  Develop robust, high-performance applications</li>
-            <li>  Solve real-world problems with cutting-edge technologies</li>
+            <li>✔️ Write clean, scalable code</li>
+            <li>✔️ Develop robust, high-performance applications</li>
+            <li>✔️ Solve real-world problems with cutting-edge technologies</li>
           </ul>
-          
+
           <div className="about-buttons">
             <Link
               to="contact"
@@ -49,7 +49,7 @@ const About = () => {
               duration={500}
               className="about-button primary"
             >
-              Contact Me
+              📩 Contact Me
             </Link>
             <Link
               to="projects"
@@ -59,7 +59,7 @@ const About = () => {
               duration={500}
               className="about-button secondary"
             >
-              View Projects
+              🚀 View Projects
             </Link>
           </div>
         </div>

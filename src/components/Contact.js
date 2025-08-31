@@ -58,7 +58,7 @@ const Contact = () => {
             <h3>Email</h3>
             <p>
               <a href="mailto:surajsonawane172@gmail.com">
-                surajsonawane172@gmail.com
+                gawadedivya15@gmail.com
               </a>
             </p>
           </div>
@@ -69,8 +69,8 @@ const Contact = () => {
             </div>
             <h3>WhatsApp</h3>
             <p>
-              <a href="https://wa.me/919860055304">
-                +91 9860055304
+              <a href="https://wa.me/7499866651">
+                +91 7499866651
               </a>
             </p>
           </div>
@@ -82,7 +82,7 @@ const Contact = () => {
             <h3>GitHub</h3>
             <p>
               <a href="https://github.com/Suraj051198" target="_blank" rel="noopener noreferrer">
-                github.com/Suraj051198
+               github.com/code-with-divya
               </a>
             </p>
           </div>
@@ -93,8 +93,8 @@ const Contact = () => {
             </div>
             <h3>LinkedIn</h3>
             <p>
-              <a href="https://www.linkedin.com/in/sonawane-suraj/" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/sonawane-suraj
+              <a href="https://www.linkedin.com/in/divya-gawade" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/divya-gawade
               </a>
             </p>
           </div>

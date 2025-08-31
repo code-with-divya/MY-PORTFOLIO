@@ -5,45 +5,29 @@ import { FaAward, FaExternalLinkAlt } from 'react-icons/fa';
 const Certificates = () => {
   const certificates = [
     {
-      title: "SQL (Intermediate)",
-      provider: "HackerRank",
-      description: "Complex joins, unions, and sub-queries",
-      link: "https://www.hackerrank.com/certificates/9020d928c317",
+      title: "Cyber Security",
+      provider: "Course completed at Simplilearn",
+      description: "Completed foundational training in cyber security concepts and practices.",
+      image: "/image/certification/cyber-securtity.jpg",
       icon: <FaAward />,
       date: "2023"
     },
     {
-      title: "CSS (Basic)",
-      provider: "HackerRank",
-      description: "Cascading, inheritance, text styling, layouts, and box model",
-      link: "https://www.hackerrank.com/certificates/e60b2407db09",
+      title: "AI Generative Model",
+      provider: "Sandip University – Workshop Course",
+      description: "Covered basic AI concepts",
+      image: "/image/certification/ai-generative-model.jpg",
       icon: <FaAward />,
-      date: "2023"
+      date: "2024"
     },
     {
-      title: "Java (Basic)",
-      provider: "HackerRank",
-      description: "Classes, data structures, inheritance, and exception handling",
-      link: "https://www.hackerrank.com/certificates/6781866e6938",
+      title: "Basic Programming in Python",
+      provider: "Workshop offered by the FOSSEE Project, IIT Bombay",
+      description: "Introductory workshop covering Python programming fundamentals.",
+      image: "/image/certification/basic_python_programming.jpg",
       icon: <FaAward />,
-      date: "2023"
+      date: "2025"
     },
-    {
-      title: "JavaScript (Basic)",
-      provider: "HackerRank",
-      description: "Functions, currying, hoisting, scope, inheritance, and error handling",
-      link: "https://www.hackerrank.com/certificates/f3399ae0ce2a",
-      icon: <FaAward />,
-      date: "2023"
-    },
-    {
-      title: "React (Basic)",
-      provider: "HackerRank",
-      description: "Routing, rendering elements, state management, handling events, and form validation",
-      link: "https://www.hackerrank.com/certificates/612ffe5ee87b",
-      icon: <FaAward />,
-      date: "2023"
-    }
   ];
 
   return (
@@ -52,19 +36,33 @@ const Certificates = () => {
         <h2>Certificates</h2>
         <div className="underline"></div>
       </div>
+      
       <div className="certificates-container">
         {certificates.map((certificate, index) => (
           <div className="certificate-card" key={index}>
             <div className="certificate-icon">
               {certificate.icon}
             </div>
+
+            <img 
+              src={certificate.image}
+              alt={certificate.title}
+              className="certificate-image"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "https://via.placeholder.com/300x200?text=Certificate+Image+Missing";
+              }}
+            />
+
             <div className="certificate-content">
               <h3>{certificate.title}</h3>
-              <p className="certificate-provider">{certificate.provider} • {certificate.date}</p>
+              <p className="certificate-provider">
+                {certificate.provider} • {certificate.date}
+              </p>
               <p className="certificate-description">{certificate.description}</p>
-              <a 
-                href={certificate.link} 
-                target="_blank" 
+              <a
+                href={certificate.image}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="certificate-link"
               >
@@ -78,4 +76,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates; 
+export default Certificates;
